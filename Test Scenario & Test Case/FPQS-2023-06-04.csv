@@ -1,0 +1,2416 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases,parameters
+,,,,,,,,,,,,,,,,,,,,1,,Login,1
+,,,,,,,,,,,,,,,,,,,,2,,Logout,1
+,,,,,,,,,,,,,,,,,,,,3,,"Menu Admin - User Management - Users",1
+,,,,,,,,,,,,,,,,,,,,4,,"Menu Admin - User Management - Users - Add User",1
+,,,,,,,,,,,,,,,,,,,,5,,"Menu Admin - User Management - Users - Edit User",1
+,,,,,,,,,,,,,,,,,,,,9,,"Menu Admin - User Management - Users - Delete User",1
+,,,,,,,,,,,,,,,,,,,,6,,"Menu Admin - Organization",1
+,,,,,,,,,,,,,,,,,,,,11,,"Menu Admin - Organization - Locations",1
+,,,,,,,,,,,,,,,,,,,,12,,"Forget Password",1
+,,,,,,,,,,,,,,,,,,,,15,,"Menu PIM - Delete Employee",1
+1,"Login - Valid Username and Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Success and Enter The Dashboard Menu",,Login,high,critical,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username""**
+3. Input ""**Valid Password""**
+4. Click ""**Login Button""**
+","1. 
+2. 
+3. 
+4. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+",,,1,,Login,,
+2,"Login - Invalid Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Stay on the Login Page and Get The Massage Error ""CSRF token validation failed""",,,medium,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Go to ""**Base Url**""
+2. Input ""**Valid Username**""
+3. Input ""**Invalid Password**""
+4. Click ""**Login Button**""
+","1. 
+2. 
+3. 
+4. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : Fahmi123
+4. 
+",,,1,,Login,,
+3,"Login - Invalid Username",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Stay on the Login Page and Get The Massage Error ""CSRF token validation failed""",,,medium,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Go to ""**Base Url""**
+2. Input ""**Invalid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button**""
+","1. 
+2. 
+3. 
+4. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Fahmi
+3. Password : admin123
+4. 
+",,,1,,Login,,
+4,"Login - Empty Username and Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Stay on the Login Page and Get The Massage Error Under the Username and Password Fields ""Required""",,,medium,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Go to ""**Base Url""**
+2. Click ""**Login Button**""
+","1. 
+2. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. 
+",,,1,,Login,,
+5,Logout,[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Back To Login Page",,,high,major,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open BaseUrl
+2. Input Valid Username
+3. Input Valid Password
+4. Click Login Button
+5. Click ""**Drop Down Profile""**
+6. Click **""Logout""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+",,,2,,Logout,,
+6,"Search System Users - Valid Username",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"Displays Data from the Username Entered",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Input ""**Valid Username""**
+7. Click **""Search""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Username = Admin
+7. 
+",,,3,,"Menu Admin - User Management - Users",,
+7,"Search System Users - By User Role",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"Displays Data for the Selected User Role",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Choose ""**User Role""**
+7. Click **""Search""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. User Role : ESS
+7. 
+",,,3,,"Menu Admin - User Management - Users",,
+8,"Search System Users - By Employee Name",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"Displays Data for the Input Employee Name",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Choose ""**Employee Name""**
+7. Click ""**![image.png](https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/c274461456bb5e1e3182d52c54fcd3b44fccb7ee/attachment/8ec5d85bb8019a6e7b252bad7230eb0f9783b02b/image.png)**""
+8. Click **""Search""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Employee Name : Paul Collings
+7. 
+8. 
+",,,3,,"Menu Admin - User Management - Users",,
+9,"Search System Users - By Status",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"Displays Data for the Status Selected",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Choose ""**Status""**
+7. Click **""Search""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Status : Enebled
+7. 
+",,,3,,"Menu Admin - User Management - Users",,
+10,"Button Reset",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"When the Button is Pressed, the Field Will Automatically Be Empty",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Input ""**Username""**
+7. Input ""**User Role""**
+8. Input ""**Employee Name""**
+9. Input ""**Status""**
+10. Click **""Reset""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Username : ""Admin""
+7. User Role : ""admin""
+8. Employee Name : ""Paul Collings""
+9. Status : ""Desebled""
+10. 
+",,,3,,"Menu Admin - User Management - Users",,
+11,"Search System Users - Invalid Username",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"Get Message ""**No Records Found""**",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Input ""**Valid Username""**
+7. Click **""Search""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Username = pamiii
+7. 
+",,,3,,"Menu Admin - User Management - Users",,
+12,"Search System Users - Invalid Employee Name",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"There is an ""Invalid"" message under the Employee Name field",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Choose ""**Employee Name""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Employee Name : asdasda
+",,,3,,"Menu Admin - User Management - Users",,
+13,"Search System Users - Empty All Field",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers](https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers),"Show All Data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Search""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. 
+",,,3,,"Menu Admin - User Management - Users",,
+14,"Add User - Input All Field",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"Data Successfully Entered into the System",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : ""Admin""
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : fahmi20
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""![image.png](https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/c274461456bb5e1e3182d52c54fcd3b44fccb7ee/attachment/a0fadd63ab7b532d84eaa4caf8de5ec3d2da616a/image.png)""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+15,"Add User - No Select User Role",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Required"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. No Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. 
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : fahmi1212
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+16,"Add User - Be Empty  Employee Name",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Required"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Be Empty ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. 
+9. Stutus : ""**Enebled**""
+10. Username : fahmi1212
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+17,"Add User - No Select Status",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Required"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. No Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. 
+10. Username : fahmi1212
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+18,"Add User - Be Empty Username",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Required"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Be Empty ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. 
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+19,"Add User - Be Empty Password",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Required"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Be Empty ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : fahmi1212
+11. 
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+20,"Add User - Be Empty Confirm Password",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Required"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Be Empty ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : fahmi1212
+11. Password : ""Dimasfahmi1""
+12. 
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+21,"Add User - Input No Record Employee Name",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Invalid"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : fahmifahmi12
+9. Stutus : ""**Enebled**""
+10. Username : fahmi20
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+22,"Add User - Fill in the existing Username",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Already exists"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : ""fahmi20""
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+23,"Add User - Password No Number",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Your password must contain minimum 1 number"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : fahmi12
+11. Password : ""Dimasfahmi""
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+24,"Add User - Password and Confirm Password are not the same",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Passwords do not match"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : fahmi12
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Fahmi""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+25,"Add User - Password Does Not Meet Terms",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Should have at least 7 characters"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : fahmi12
+11. Password : ""Fahmi""
+12. Confirm Password : ""Fahmi""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+66,"Add User - Username Does Not Meet Terms",[https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser](https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser),"""Already exists"" Message Appears",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Add""**
+7. Select **""User Role""**
+8. Input ""**Employee Name**""
+9. Select **""Status""**
+10. Input ""**Username**""
+11. Input ""**Password**""
+12. Input ""**Confirm Password**""
+13. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. 
+6. 
+7. User Role : Admin
+8. Employee Name : ""Paul Collings""
+9. Stutus : ""**Enebled**""
+10. Username : ""fahm""
+11. Password : ""Dimasfahmi1""
+12. Confirm Password : ""Dimasfahmi1""
+13. 
+",,,4,,"Menu Admin - User Management - Users - Add User",,
+52,"Edit User - All Field",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"All Fields Changed to new data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Edit ""**User Role**""
+8. Edit ""**Employee Name**""
+9. Edit ""**Status**""
+10. Edit ""**Username""**
+11. Click Button ""**Yes**""
+12. Edit **""Password""**
+13. Edit ""**Confirm Password""**
+14. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. User Role : ""ESS""
+8. EN : ""Odis Adalwin""
+9. Statuss : ""Disebled""
+10. Username : ![image.png](https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/c274461456bb5e1e3182d52c54fcd3b44fccb7ee/attachment/6b1ca0e1e0498245a776dc7f1ac67d819c3526f0/image.png)
+11. in Change Password ?
+12. Password : Dimasfahmi12
+13. Confirm Password : Dimasfahmi12
+14. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+56,"Edit User - All Field Except Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Fields Changed to new data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Edit ""**User Role**""
+8. Edit ""**Employee Name**""
+9. Edit ""**Status**""
+10. Edit ""**Username""**
+11. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. User Role : ""ESS""
+8. EN : ""Fahmi1212""
+9. Statuss : ""Enebled""
+10. Username : Rizzal12
+11. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+53,"Edit User - Empty All Field",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"""Required"" Massage",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Edit Logo""**
+7. Empty ""**User Role**""
+8. Empty ""**Employee Name**""
+9. Empty ""**Status**""
+10. Empty ""**Username""**
+11. Click Button ""**Yes**""
+12. Empty **""Password""**
+13. Empty ""**Confirm Password""**
+14. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. ""Required"" Massage
+8. ""Required"" Massage
+9. ""Required"" Massage
+10. ""Required"" Massage
+11. 
+12. ""Required"" Massage
+13. ""Required"" Massage
+14. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. 
+8. 
+9. 
+10. 
+11. in Change Password ?
+12. 
+13. 
+14. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+54,"Edit User - Empty All Field Except Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"""Required"" Massage",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Edit Logo""**
+7. Empty ""**User Role**""
+8. Empty ""**Employee Name**""
+9. Empty ""**Status**""
+10. Empty ""**Username""**
+11. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. ""Required"" Massage
+8. ""Required"" Massage
+9. ""Required"" Massage
+10. ""Required"" Massage
+11. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. 
+8. 
+9. 
+10. 
+11. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+57,"Edit User - User Role",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Fields Changed to new data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Edit ""**User Role**""
+8. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. User Role : ""Admin""
+8. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+58,"Edit User - Employee Name Valid Data",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Fields Changed to new data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Edit ""**Employee Name**""
+8. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. EN : ""![image.png](https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/c274461456bb5e1e3182d52c54fcd3b44fccb7ee/attachment/bb379f9a839896a492ff726ba2e2c867a86e6ec6/image.png)""
+8. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+59,"Edit User - Status",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Fields Changed to new data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Edit ""**Status**""
+8. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. Statuss : ""Enebled""
+8. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+60,"Edit User - Username",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Fields Changed to new data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Edit ""**Username""**
+8. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. Username : Fahmi121
+8. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+61,"Edit User - Only Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"""Required"" Massage in Field Confirm Password",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Click Button ""**Yes**""
+8. Edit **""Password""**
+9. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. in Change Password ?
+8. Password : Dimasfahmi11
+9. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+62,"Edit User - Password and Confirm Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Fields Changed to new data",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Click Button ""**Yes**""
+8. Edit **""Password""**
+9. Edit ""**Confirm Password""**
+10. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. in Change Password ?
+8. Password : Dimasfahmi11
+9. Confirm Password : Dimasfahmi11
+10. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+63,"Edit User - Password No Number",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"""Your password must contain minimum 1 number"" Massage",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Click Button ""**Yes**""
+8. Edit **""Password""**
+9. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. in Change Password ?
+8. Password : Dimasfahmi
+9. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+64,"Edit User - Password and Confirm Password are not the same",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"""Passwords do not match"" Massage",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Click Button ""**Yes**""
+8. Edit **""Password""**
+9. Edit ""**Confirm Password""**
+10. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. in Change Password ?
+8. Password : Dimasfahmi11
+9. Confirm Password : Dimasfahmi
+10. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+65,"Edit User - Password Does Not Meet Terms",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"""Should have at least 7 characters"" Massage",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Click Button ""**Yes**""
+8. Edit **""Password""**
+9. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. in Change Password ?
+8. Password : Dimas
+9. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+67,"Edit User - Employee Name Invalid Data",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"Fields Changed to new data",,,undefined,normal,other,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""**Logo Edit""**
+7. Edit ""**Employee Name**""
+8. Click ""**Save""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. Table Data >> Actions
+7. EN : ""Fahmi""
+8. 
+",,,5,,"Menu Admin - User Management - Users - Edit User",,
+50,"Delete User",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click Icon ""**Trush**""
+7. Click **""Yes, Delete""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. 
+7. 
+",,,9,,"Menu Admin - User Management - Users - Delete User",,
+51,"Delete Admin",,,,,undefined,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click Icon ""**Trush**""
+7. Click **""Yes, Delete""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Admin Data
+7. 
+",,,9,,"Menu Admin - User Management - Users - Delete User",,
+68,"Multiple Delete",,"Selected data will be deleted",,,undefined,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Select some data to be deleted
+7. Click Icon ""**Trush**""
+8. Click **""Yes, Delete""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. 3 Data
+7. Above List data
+8. 
+",,,9,,"Menu Admin - User Management - Users - Delete User",,
+26,"Edit Organization - Input All Field",,,,,undefined,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Input ""Organization Name""
+9. Input ""Registration Number""
+10. Input ""Tax ID""
+11. Input ""Phone""
+12. Input ""Fax""
+13. Input ""Email""
+14. Input ""Address Street 1""
+15. Input ""Address Street 2""
+16. Input ""City""
+17. Input ""State/Province""
+18. Input ""Zip/Postal Code""
+19. Select ""Country""
+20. Input ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. OrangeHRM
+9. 1122334455
+10. 5544332211
+11. 081127371839
+12. 555432
+13. info@orangehrm.com
+14. 538 Teal Plaza
+15. 550 Sesame Street
+16. Secaucus
+17. KN
+18. 13132
+19. Indonesia
+20. Orange is a website
+21. 
+",,,6,,"Menu Admin - Organization",,
+27,"Edit Organization - Empty All Field",,"Empty All Field Text",,,high,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Empty ""Organization Name""
+9. Empty ""Registration Number""
+10. Empty ""Tax ID""
+11. Empty ""Phone""
+12. Empty ""Fax""
+13. Empty ""Email""
+14. Empty ""Address Street 1""
+15. Empty ""Address Street 2""
+16. Empty ""City""
+17. Empty ""State/Province""
+18. Empty ""Zip/Postal Code""
+19. Empty ""Country""
+20. Empty ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. Required Input Data
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. 
+",,,6,,"Menu Admin - Organization",,
+28,"Edit Organization - Empty Registration Number",,"Empty Registration Number Field",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Input ""Organization Name""
+9. Empty ""Registration Number""
+10. Input ""Tax ID""
+11. Input ""Phone""
+12. Input ""Fax""
+13. Input ""Email""
+14. Input ""Address Street 1""
+15. Input ""Address Street 2""
+16. Input ""City""
+17. Input ""State/Province""
+18. Input ""Zip/Postal Code""
+19. Select ""Country""
+20. Input ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. OrangeHRM
+9. 
+10. 5544332211
+11. 081127371839
+12. 555432
+13. info@orangehrm.com
+14. 538 Teal Plaza
+15. 550 Sesame Street
+16. Secaucus
+17. KN
+18. 13132
+19. Indonesia
+20. Orange is a website
+21. 
+",,,6,,"Menu Admin - Organization",,
+29,"Edit Organization - Empty Tax ID",,"Empty Tax ID Field",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Input ""Organization Name""
+9. Input ""Registration Number""
+10. Empty ""Tax ID""
+11. Input ""Phone""
+12. Input ""Fax""
+13. Input ""Email""
+14. Input ""Address Street 1""
+15. Input ""Address Street 2""
+16. Input ""City""
+17. Input ""State/Province""
+18. Input ""Zip/Postal Code""
+19. Select ""Country""
+20. Input ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. OrangeHRM
+9. 1122334455
+10. 
+11. 081127371839
+12. 555432
+13. info@orangehrm.com
+14. 538 Teal Plaza
+15. 550 Sesame Street
+16. Secaucus
+17. KN
+18. 13132
+19. Indonesia
+20. Orange is a website
+21. 
+",,,6,,"Menu Admin - Organization",,
+30,"Edit Organization - Empty Phone",,"Empty Phone Field",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Input ""Organization Name""
+9. Input ""Registration Number""
+10. Input ""Tax ID""
+11. Empty ""Phone""
+12. Input ""Fax""
+13. Input ""Email""
+14. Input ""Address Street 1""
+15. Input ""Address Street 2""
+16. Input ""City""
+17. Input ""State/Province""
+18. Input ""Zip/Postal Code""
+19. Select ""Country""
+20. Input ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. OrangeHRM
+9. 1122334455
+10. 5544332211
+11. 
+12. 555432
+13. info@orangehrm.com
+14. 538 Teal Plaza
+15. 550 Sesame Street
+16. Secaucus
+17. KN
+18. 13132
+19. Indonesia
+20. Orange is a website
+21. 
+",,,6,,"Menu Admin - Organization",,
+31,"Edit Organization - Empty Fax",,"Empty Fax Field",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Input ""Organization Name""
+9. Input ""Registration Number""
+10. Input ""Tax ID""
+11. Input ""Phone""
+12. Empty ""Fax""
+13. Input ""Email""
+14. Input ""Address Street 1""
+15. Input ""Address Street 2""
+16. Input ""City""
+17. Input ""State/Province""
+18. Input ""Zip/Postal Code""
+19. Select ""Country""
+20. Input ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. OrangeHRM
+9. 1122334455
+10. 5544332211
+11. 081127371839
+12. 
+13. info@orangehrm.com
+14. 538 Teal Plaza
+15. 550 Sesame Street
+16. Secaucus
+17. KN
+18. 13132
+19. Indonesia
+20. Orange is a website
+21. 
+",,,6,,"Menu Admin - Organization",,
+32,"Edit Organization - Empty Email",,"Empty Email Field",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Input ""Organization Name""
+9. Input ""Registration Number""
+10. Input ""Tax ID""
+11. Input ""Phone""
+12. Input ""Fax""
+13. Empty ""Email""
+14. Input ""Address Street 1""
+15. Input ""Address Street 2""
+16. Input ""City""
+17. Input ""State/Province""
+18. Input ""Zip/Postal Code""
+19. Select ""Country""
+20. Input ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. OrangeHRM
+9. 1122334455
+10. 5544332211
+11. 081127371839
+12. 555432
+13. 
+14. 538 Teal Plaza
+15. 550 Sesame Street
+16. Secaucus
+17. KN
+18. 13132
+19. Indonesia
+20. Orange is a website
+21. 
+",,,6,,"Menu Admin - Organization",,
+34,"Edit Organization - Empty Address",,"Empty All Address Field",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Click ""Edit""
+8. Input ""Organization Name""
+9. Input ""Registration Number""
+10. Input ""Tax ID""
+11. Input ""Phone""
+12. Input ""Fax""
+13. Input ""Email""
+14. Empty ""Address Street 1""
+15. Empty ""Address Street 2""
+16. Empty ""City""
+17. Empty ""State/Province""
+18. Empty ""Zip/Postal Code""
+19. Select ""Country""
+20. Input ""Notes""
+21. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. OrangeHRM
+9. 1122334455
+10. 5544332211
+11. 081127371839
+12. 555432
+13. info@orangehrm.com
+14. 
+15. 
+16. 
+17. 
+18. 
+19. \-\- Select \-\-
+20. Orange is a website
+21. 
+",,,6,,"Menu Admin - Organization",,
+39,"Add Locations - Input All Field",,"Input All Field Text",,,undefined,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""+ Add""
+9. Input ""Name""
+10. Input ""City""
+11. Input ""State/Province""
+12. Input ""ZIP/Postal Code""
+13. Select ""Country""
+14. Input ""Phone""
+15. Input ""Fax""
+16. Input ""Address""
+17. Input ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. Successfully Saved
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. 
+9. Joni Morningstar
+10. Jakarta
+11. Jakarta Timur
+12. 13132
+13. Indonesia
+14. 012681238012
+15. 276662
+16. ![image.png](https://qase-app-prod.s3.us-east-2.amazonaws.com/public/team/c274461456bb5e1e3182d52c54fcd3b44fccb7ee/attachment/6d5b356c2723a35ba7180b547a144e9ed556d211/image.png)
+17. Halo aku joni
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+40,"Add Locations - Empty All Field",,"Empty All Field Text",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""+ Add""
+9. Empty ""Name""
+10. Empty ""City""
+11. Empty ""State/Province""
+12. Empty ""ZIP/Postal Code""
+13. Select ""Country""
+14. Empty ""Phone""
+15. Empty ""Fax""
+16. Empty ""Address""
+17. Empty ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. Required
+10. 
+11. 
+12. 
+13. Required
+14. 
+15. 
+16. 
+17. 
+18. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. 
+9. 
+10. 
+11. 
+12. 
+13. \-\- Select \-\-
+14. 
+15. 
+16. 
+17. 
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+43,"Add Locations - Empty All Field Except Name and Country",,"Empty All Field Except Name and Country",,,undefined,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""+ Add""
+9. Input ""Name""
+10. Empty ""City""
+11. Empty ""State/Province""
+12. Empty ""ZIP/Postal Code""
+13. Select ""Country""
+14. Empty ""Phone""
+15. Empty ""Fax""
+16. Empty ""Address""
+17. Empty ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. Successfully Saved
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. 
+9. Joni Morningstar
+10. 
+11. 
+12. 
+13. Indonesia
+14. 
+15. 
+16. 
+17. 
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+41,"Add Locations - Empty Name",,"Empty Name Field Text",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""+ Add""
+9. Empty ""Name""
+10. Input ""City""
+11. Input ""State/Province""
+12. Input ""ZIP/Postal Code""
+13. Select ""Country""
+14. Input ""Phone""
+15. Input ""Fax""
+16. Input ""Address""
+17. Input ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. Required
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. 
+9. 
+10. Jakarta
+11. Jakarta Timur
+12. 13132
+13. Indonesia
+14. 012681238012
+15. 276662
+16. 554 Sesame Street
+17. Halo aku joni
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+42,"Add Locations - No Select Country",,"No Select Country Dropdown",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""+ Add""
+9. Input ""Name""
+10. Input ""City""
+11. Input ""State/Province""
+12. Input ""ZIP/Postal Code""
+13. Select ""Country""
+14. Input ""Phone""
+15. Input ""Fax""
+16. Input ""Address""
+17. Input ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. Required
+14. 
+15. 
+16. 
+17. 
+18. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. 
+9. Joni Morningstar
+10. Jakarta
+11. Jakarta Timur
+12. 13132
+13. \-\- Select \-\-
+14. 012681238012
+15. 276662
+16. 554 Sesame Street
+17. Halo aku joni
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+44,"Edit Locations - Edit All Field",,"Edit All Field Text Data",,,undefined,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""Edit""
+9. Edit ""Name""
+10. Edit ""City""
+11. Edit ""State/Province""
+12. Edit ""ZIP/Postal Code""
+13. Re-select ""Country""
+14. Edit ""Phone""
+15. Edit ""Fax""
+16. Edit ""Address""
+17. Edit ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. Successfully Updated
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. On Table Records Found
+9. Joni Morningstar
+10. Jakarta
+11. Jakarta Timur
+12. 13132
+13. Indonesia
+14. 012681238012
+15. 276662
+16. 554 Sesame Street
+17. Halo aku joni
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+45,"Edit Locations - Empty All Field",,"Empty All Field Text Data",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""Edit""
+9. Empty ""Name""
+10. Empty ""City""
+11. Empty ""State/Province""
+12. Empty ""ZIP/Postal Code""
+13. Re-select ""Country""
+14. Empty ""Phone""
+15. Empty ""Fax""
+16. Empty ""Address""
+17. Empty ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. Required
+10. 
+11. 
+12. 
+13. Required
+14. 
+15. 
+16. 
+17. 
+18. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. 
+8. On Table Records Found
+9. 
+10. 
+11. 
+12. 
+13. \-\- Select \-\-
+14. 
+15. 
+16. 
+17. 
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+46,"Edit Locations - Empty All Field Except Name and Country",,"Empty All Field Except Name and Country",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""Edit""
+9. Edit ""Name""
+10. Empty ""City""
+11. Empty ""State/Province""
+12. Empty ""ZIP/Postal Code""
+13. Re-select ""Country""
+14. Empty ""Phone""
+15. Empty ""Fax""
+16. Empty ""Address""
+17. Empty ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. Successfully Saved
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. On Table Record Found
+9. Joni Morningstar
+10. 
+11. 
+12. 
+13. Indonesia
+14. 
+15. 
+16. 
+17. 
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+47,"Edit Locations - Empty Name",,"Empty Name Field Text",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""Edit""
+9. Empty ""Name""
+10. Edit ""City""
+11. Edit ""State/Province""
+12. Edit ""ZIP/Postal Code""
+13. Re-select ""Country""
+14. Edit ""Phone""
+15. Edit ""Fax""
+16. Edit ""Address""
+17. Edit ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. Required
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. On Table Record Found
+9. 
+10. Jakarta
+11. Jakarta Timur
+12. 13132
+13. Indonesia
+14. 012681238012
+15. 276662
+16. 554 Sesame Street
+17. Halo aku joni
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+48,"Edit Locations - No Select Country",,"No Select Country Dropdown",,,undefined,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Click ""Edit""
+9. Edit ""Name""
+10. Edit ""City""
+11. Edit ""State/Province""
+12. Edit ""ZIP/Postal Code""
+13. Re-select ""Country""
+14. Edit ""Phone""
+15. Edit ""Fax""
+16. Edit ""Address""
+17. Edit ""Notes""
+18. Click ""Save""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. Required
+14. 
+15. 
+16. 
+17. 
+18. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. On Table Record Found
+9. Joni Morningstar
+10. Jakarta
+11. Jakarta Timur
+12. 13132
+13. \-\- Select \-\-
+14. 012681238012
+15. 276662
+16. 554 Sesame Street
+17. Halo aku joni
+18. 
+",,,11,,"Menu Admin - Organization - Locations",,
+49,"Delete Locations - Delete Successfully",,"Have a data to delete",,,undefined,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**Admin""**
+6. Click ""Organization""
+7. Select ""Locations""
+8. Select Record to Delete
+9. Click ""Yes, Delete""
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. Successfully Deleted
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Dropdown Menu
+7. In Dropdown Menu
+8. 
+9. 
+",,,11,,"Menu Admin - Organization - Locations",,
+69,"Forget Password",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),"""Reset Password link sent successfully"" Massage",,Login,high,normal,other,positive,is-not-automated,actual,no,e2e,classic,"1. Open ""**BaseUrl""**
+2. Click ""**Forgot your password?""**
+3. Input ""**Username""**
+4. Click ""**Reset Password**""
+","1. 
+2. 
+3. 
+4. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. 
+3. Username = ""Admin""
+4. 
+",,,12,,"Forget Password",,
+73,"Delete Employee User",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),,,,undefined,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**PIM""**
+6. Click Icon ""**Trush**""
+7. Click **""Yes, Delete""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. In Table >> Actions
+7. 
+",,,15,,"Menu PIM - Delete Employee",,
+75,"Delete Multiple Employee User",[https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/),,,,undefined,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Open ""**BaseUrl""**
+2. Input ""**Valid Username**""
+3. Input ""**Valid Password**""
+4. Click ""**Login Button""**
+5. Click ""**PIM""**
+6. Click ""**Select Multiple Button**""
+7. Click Icon ""**Trush**""
+8. Click **""Yes, Delete""**
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/)
+2. Username : Admin
+3. Password : admin123
+4. 
+5. In Sidebar Menu
+6. 
+7. Above List data
+8. 
+",,,15,,"Menu PIM - Delete Employee",,
