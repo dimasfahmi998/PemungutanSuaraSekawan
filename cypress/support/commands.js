@@ -13,16 +13,18 @@
 
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-Cypress.Commands.add("login", (validUsernmae, validPassword) => {
-  cy.visit("https://opensource-demo.orangehrmlive.com/");
-  cy.get(":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input").type(validUsernmae);
-  cy.get(":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input").type(validPassword);
-  cy.get(".oxd-button").click();
+Cypress.Commands.add("login", (username, password) => {
+  cy.visit("https://aps-rejanglebong.skwn.dev/dev");
+  cy.get('#username').type(username)
+  cy.get('#password').type(password);
+  cy.get('#kt_login_signin_submit').click({ force: true });
+  cy.get(':nth-child(3) > .menu-link').click({ force: true });
 });
 
 Cypress.on("uncaught:exception", (err, runnable) => {
   return false;
 });
+
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
